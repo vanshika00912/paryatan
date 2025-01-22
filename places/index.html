@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Web Code</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- link file css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="disableBackButton()">
+
+  <header>
+    <img src="..//Home/logo.png" class="logo">
+    <nav class="navigation">
+        <a href="/Home/index.html" class="feedback">Home</a>
+        <a href="..//Feedback/page.html" id="s" class="active">SIGNout</a>        
+    </nav>
+</header>
+
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="..//Places/details/akshardham.html"><img src="akshardham.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/banglasahib.html"><img src="bangla sahib.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/indiagate.html"><img src="Indiagate.png" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/iskontemple.html"><img src="Iskon Temple.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/lodhigarden.html"><img src="lodhi garden.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/lotus.html"><img src="lotustemple.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/qutubminar.html"><img src="Qutub Minar.png" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/raspatibhavan.html"><img src="rashtrapati bhavan.jpg" alt=""></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="..//Places/details/redfort.html"><img src="Red Fort.png" alt=""></a>
+      </div>
+      
+    
+    </div>
+  </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbw7x1Kt391Whp869oi6vPYWf-RhgnYrA",
+      authDomain: "parytan-5b892.firebaseapp.com",
+      projectId: "parytan-5b892",
+      storageBucket: "parytan-5b892.appspot.com",
+      messagingSenderId: "619482587917",
+      appId: "1:619482587917:web:2dea734e953e0bcf3e8644",
+      measurementId: "G-3TJQG69NL7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    // Initialize Firebase Authentication and get a reference to the service
+    const auth = getAuth(app);
+
+    document.getElementById("s").addEventListener("click", function () {
+      signOut(auth).then(() => {
+        // Sign-out successful.
+        console.log("Sign-out successful.");
+        window.location.href = "../Home/index.html";
+      }).catch((error) => {
+        // An error happened.
+        console.log("An error happened.");
+      });
+    });
+
+
+
+
+  </script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 15,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+    });
+
+    function disableBackButton() {
+      window.history.pushState(null, "", window.location.href);
+      window.onpopstate = function () {
+        window.history.pushState(null, "", window.location.href);
+      };
+      console.log("back button disabled");
+    }
+    // Call the function to disable the back button when the page loads
+    window.onload = disableBackButton;
+  </script>
+</body>
+
+</html>
