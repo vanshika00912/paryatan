@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getLocation()">
+    <header>
+        <img src="logo.png" class="logo">
+        <nav class="navigation">
+            <a href="/Home/index.html" class="feedback">Home</a>
+            
+        </nav>
+    </header>
+    <div class="rightsidebar">
+        <h3>Paryatan maps:</h3>
+
+        <div class="table-container">
+            <table>
+
+                <tbody id="table-body">
+                    <tr>
+                        <th>From</th>
+                        <td id="fromdata">From Data</td>
+                    </tr>
+                    <tr>
+                        <th>Destination</th>
+                        <td id="destinationdata">Destination Data</tdd </tr>
+                    <tr>
+                        <th>Duration</th>
+                        <td id="durationdata">Duration Data</td>
+                    </tr>
+                    <tr>
+                        <th>Distance</th>
+                        <td id="distancedata">Distance Data</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table>
+                <tbody>
+                    <tr>
+                        <div class="mapouter">
+                            <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0"
+                                    scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Qutab Minar&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                                    href="https://connectionsgame.org/">Connections Unlimited</a></div>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    width: 100%;
+                                    height: 400px;
+                                }
+
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    width: 100%;
+                                    height: 400px;
+                                }
+
+                                .gmap_iframe {
+                                    height: 400px !important;
+                                }
+                            </style>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+    </div>
+    <div class="background"></div>
+    <div class="content"></div>
+
+    <div class="container">
+        <div class="box">
+
+
+
+            <img src="..//Qutub Minar.png" id="lotus" alt="rr">
+
+            <div class="b-container">
+                <table>
+
+                    <tbody id="table-body">
+                        <tr>
+                            <th class="bhead">Monument</th>
+                            <td>Qutub Minar</td>
+                        </tr>
+                        <tr>
+                            <th class="bhead">History And Culture</th>
+                            <td>
+                                <p> qutub minar
+
+                                    Qutub Minar, an architectural marvel situated in Delhi, India, is a towering
+                                    testament to the region's rich history and culture. Standing at a staggering height
+                                    of 73 meters (240 feet), it is the world's tallest brick minaret and a UNESCO World
+                                    Heritage Site. The construction of Qutub Minar commenced in 1192 under the rule of
+                                    Qutb-ud-din Aibak, the founder of the Delhi Sultanate, and was later expanded by
+                                    successive rulers. Its intricate design showcases a fusion of Indo-Islamic
+                                    architectural styles, featuring intricate calligraphy and stunning geometric
+                                    patterns in its red sandstone façade. The minaret, surrounded by the historic Qutub
+                                    Complex, serves as a symbol of India's diverse cultural heritage and its historical
+                                    connection to the Islamic world. Visitors flock to marvel at its grandeur, explore
+                                    the ornate Quwwat-ul-Islam Mosque nearby, and soak in the rich historical and
+                                    artistic legacy that Qutub Minar represents.
+
+                                    <br><br>
+
+                                    Qutub Minar, a towering masterpiece of Indo-Islamic architecture located in Delhi,
+                                    India, is steeped in history that dates back to the 12th century. Construction of
+                                    this magnificent minaret was initiated by Qutb-ud-din Aibak, the founder of the
+                                    Delhi Sultanate, in 1192. Upon his death, it was continued by his successor
+                                    Iltutmish and further expanded by subsequent rulers. Qutub Minar's distinct design
+                                    showcases a remarkable blend of Indo-Islamic styles, with its five storeys adorned
+                                    by intricately carved sandstone and marble. Its original purpose was multifaceted,
+                                    serving as a victory tower, a call to prayer, and a symbol of the Sultanate's power
+                                    and authority. The inscriptions on the minaret provide insights into its historical
+                                    context. Today, Qutub Minar stands as a UNESCO World Heritage Site, drawing visitors
+                                    from around the world to marvel at its architectural grandeur, appreciate its
+                                    historical significance, and immerse themselves in India's rich cultural heritage.
+
+                                    <br><br>
+
+                                    The Qutub Minar, a towering symbol of India's rich cultural tapestry, represents a
+                                    fusion of diverse influences that have shaped the nation's history. Located in
+                                    Delhi, this remarkable Indo-Islamic architectural masterpiece serves as a testament
+                                    to the confluence of cultures and religions. Its construction, initiated by
+                                    Qutb-ud-din Aibak in the 12th century, signifies the advent of Islamic rule in the
+                                    Indian subcontinent. The intricate calligraphy and geometric patterns adorning its
+                                    red sandstone surface reflect Islamic artistry, while its association with the
+                                    historic Qutub Complex, which includes the Quwwat-ul-Islam Mosque and the iron
+                                    pillar, underscores its role in the spread of Islam in India. Moreover, the minaret
+                                    stands on the site of ancient Hindu and Jain temples, representing a continuity of
+                                    culture and religion. Today, Qutub Minar remains a symbol of India's cultural
+                                    diversity, where visitors from all over the world can appreciate the blend of
+                                    historical narratives and artistic expressions that have defined the nation's
+                                    identity for centuries.</p>
+
+                            </td>
+                        </tr>
+
+                        <div class="invisible-content">
+                            <tr class="invisible-content">
+                                <th>Bookings</th>
+                                <td><a href="..//TicketSystem/index.html">Bookings </a></td>
+                            </tr>
+
+                        </div>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="btn">Readmore </button>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="qutubminar.html"></script>
+
+</body>
+
+</html>
